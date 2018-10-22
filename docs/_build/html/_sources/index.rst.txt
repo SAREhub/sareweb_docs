@@ -1,0 +1,18 @@
+#####
+Wstęp
+#####
+
+.. toctree::
+    :hidden:
+
+    self
+
+.. toctree::
+    :maxdepth: 2
+
+    basic
+    events
+    carts
+    form_events
+    personalization
+

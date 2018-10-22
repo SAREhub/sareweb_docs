@@ -1,0 +1,9 @@
+.wy-side-nav-search {
+    background-color: #eee;
+    color: #f04e23;
+}
+
+.wy-nav-content {
+    width: 100% !important;
+    max-width: none;
+}

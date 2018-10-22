@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Zdarzenia koszykowe &mdash; SAREweb 1.0.0 - dokumentacja</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" type="text/css" />
+  
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/extra.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Indeks"
+              href="genindex.html"/>
+        <link rel="search" title="Szukaj" href="search.html"/>
+    <link rel="top" title="SAREweb 1.0.0 - dokumentacja" href="index.html"/>
+        <link rel="next" title="Przechwytywanie informacji z formularzy" href="form_events.html"/>
+        <link rel="prev" title="Wysyłanie zdarzeń" href="events.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SAREweb
+          
+
+          
+            
+            <img src="_static/logo_color.png" class="logo" />
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Wstęp</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic.html">Podstawowy kod śledzący</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">Wysyłanie zdarzeń</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Zdarzenia koszykowe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#przejscie-kategorie-produktu">Przejście kategorię produktu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przejscie-na-strone-produktu">Przejście na stronę produktu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dodania-produktu-do-koszyka">Dodania produktu do koszyka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usuniecia-produktu-z-koszyka">Usunięcia produktu z koszyka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zwiekszenie-zmniejszenie-liczby-produktu-w-koszyku">Zwiększenie/zmniejszenie liczby produktu w koszyku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przejscia-na-strone-gdzie-klient-podaje-dane-osobowe">Przejścia na stronę, gdzie klient podaje dane osobowe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przejscia-na-strone-gdzie-klient-wybiera-forme-dostarczenia-produktu">Przejścia na stronę, gdzie klient wybiera formę dostarczenia produktu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przejscia-do-platnosci-z-poziomu-koszyka">Przejścia do płatności z poziomu koszyka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przejscia-na-podsumowanie-koszyka-zakupu">Przejścia na podsumowanie koszyka/zakupu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przejscia-na-potwierdzenie-koszyka-zakupu">Przejścia na potwierdzenie koszyka/zakupu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finalizacji-zakupu-po-zaplacie-za-towar">Finalizacji zakupu (po zapłacie za towar)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="form_events.html">Przechwytywanie informacji z formularzy</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SAREweb</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Zdarzenia koszykowe</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/carts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="zdarzenia-koszykowe">
+<h1>Zdarzenia koszykowe<a class="headerlink" href="#zdarzenia-koszykowe" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Jeśli adres email nie jest znany w momencie wykonania któregoś z powyższy zdarzeń, wartość parametru <strong>&#8216;_email&#8217;</strong> będzie pusta (lub null).</p>
+<div class="section" id="przejscie-kategorie-produktu">
+<h2>Przejście kategorię produktu<a class="headerlink" href="#przejscie-kategorie-produktu" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">tag</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span><span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_category&#39;</span><span class="o">:</span><span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii&#39;</span><span class="p">}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span><span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_category&#39;</span><span class="o">:</span><span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii&#39;</span><span class="p">}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Parametr <strong>&#8216;country&#8217;</strong> i <strong>&#8216;language&#8217;</strong> jest wymagany. Wartość parametru <strong>&#8216;country&#8217;</strong> przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru <strong>&#8216;language&#8217;</strong> przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.</p>
+</div>
+<div class="section" id="przejscie-na-strone-produktu">
+<h2>Przejście na stronę produktu<a class="headerlink" href="#przejscie-na-strone-produktu" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">tag</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span><span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_product&#39;</span><span class="o">:</span><span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="o">:</span><span class="s1">&#39;nazwa produktu&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span> <span class="o">:</span> <span class="mf">59.00</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span> <span class="o">:</span> <span class="s1">&#39;pln&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span> <span class="o">:</span> <span class="s1">&#39;URL produktu&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="o">:</span><span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii2&#39;</span><span class="p">}]}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span><span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_product&#39;</span><span class="o">:</span><span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="o">:</span><span class="s1">&#39;nazwa produktu&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span> <span class="o">:</span> <span class="mf">59.00</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span> <span class="o">:</span> <span class="s1">&#39;pln&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span> <span class="o">:</span> <span class="s1">&#39;URL produktu&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="o">:</span><span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii2&#39;</span><span class="p">}]}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Parametr <strong>&#8216;country&#8217;</strong>, <strong>&#8216;language&#8217;</strong> i <strong>&#8216;id&#8217;</strong> jest wymagany. Wartość parametru <strong>&#8216;country&#8217;</strong> przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru <strong>&#8216;language&#8217;</strong> przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1. Parametr <strong>&#8216;id&#8217;</strong> to identyfikator produktu. Jeśli jest dostarczany product feed, wówczas parametr <strong>&#8216;category&#8217;</strong> jest opcjonalny (wycinamy go, jeśli nie chcemy go dostarczać)</p>
+</div>
+<div class="section" id="dodania-produktu-do-koszyka">
+<h2>Dodania produktu do koszyka<a class="headerlink" href="#dodania-produktu-do-koszyka" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="s1">&#39;_cartadd&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;product_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;5578&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span> <span class="o">:</span> <span class="mf">99.00</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span> <span class="o">:</span> <span class="s1">&#39;pln&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span> <span class="o">:</span> <span class="s1">&#39;Nazwa produktu&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span> <span class="o">:</span> <span class="s1">&#39;URL produktu&#39;</span><span class="p">,</span> <span class="s1">&#39;extra&#39;</span><span class="o">:</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="o">:</span> <span class="s1">&#39;rozmiar&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span> <span class="o">:</span> <span class="s1">&#39;kolor&#39;</span><span class="p">},</span> <span class="s1">&#39;category&#39;</span><span class="o">:</span><span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii2&#39;</span><span class="p">}]}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="s1">&#39;_cartadd&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;product_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;5578&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span> <span class="o">:</span> <span class="mf">99.00</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span> <span class="o">:</span> <span class="s1">&#39;pln&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span> <span class="o">:</span> <span class="s1">&#39;Nazwa produktu&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span> <span class="o">:</span> <span class="s1">&#39;URL produktu&#39;</span><span class="p">,</span> <span class="s1">&#39;extra&#39;</span><span class="o">:</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="o">:</span> <span class="s1">&#39;rozmiar&#39;</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span> <span class="o">:</span> <span class="s1">&#39;kolor&#39;</span><span class="p">},</span> <span class="s1">&#39;category&#39;</span><span class="o">:</span><span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;nazwa kategorii2&#39;</span><span class="p">}]}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Parametr <strong>&#8216;country&#8217;</strong> i <strong>&#8216;language&#8217;</strong> jest wymagany. Wartość parametru <strong>&#8216;country&#8217;</strong> przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru <strong>&#8216;language&#8217;</strong> przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.</p>
+<p>Parametr <strong>&#8216;quantity&#8217;</strong> powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zwiększamy ilość o 2j. (czyli w sumie na 5j.) wartość parametru <strong>&#8216;quantity&#8217;</strong> będzie wynosić 5.</p>
+<p>Parametr <strong>&#8216;price&#8217;</strong> powinien przyjmować wartość ceny jednostkowej produktu.</p>
+</div>
+<div class="section" id="usuniecia-produktu-z-koszyka">
+<h2>Usunięcia produktu z koszyka<a class="headerlink" href="#usuniecia-produktu-z-koszyka" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartdel&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;product_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;5578&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span> <span class="o">:</span> <span class="mf">99.00</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span> <span class="o">:</span> <span class="s1">&#39;pln&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartdel&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;product_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;5578&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span> <span class="o">:</span> <span class="mf">99.00</span><span class="p">,</span> <span class="s1">&#39;currency&#39;</span> <span class="o">:</span> <span class="s1">&#39;pln&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Parametr <strong>&#8216;country&#8217;</strong> i <strong>&#8216;language&#8217;</strong> jest wymagany. Wartość parametru <strong>&#8216;country&#8217;</strong> przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru <strong>&#8216;language&#8217;</strong> przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.</p>
+<p>Parametr <strong>&#8216;quantity&#8217;</strong> powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zmniejszamy ilość o 2j. (czyli w sumie na 1j.) wartość parametru <strong>&#8216;quantity&#8217;</strong> będzie wynosić 1.</p>
+<p>Parametr <strong>&#8216;price&#8217;</strong> powinien przyjmować wartość ceny jednostkowej produktu.</p>
+</div>
+<div class="section" id="zwiekszenie-zmniejszenie-liczby-produktu-w-koszyku">
+<h2>Zwiększenie/zmniejszenie liczby produktu w koszyku<a class="headerlink" href="#zwiekszenie-zmniejszenie-liczby-produktu-w-koszyku" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Parametr &#8216;quantity&#8217; przyjmuje wartość na jaką ustawiana jest liczba danego produktu podczas jej edycji:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartquantity&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;product_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;5578&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartquantity&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;country&#39;</span> <span class="o">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="o">:</span> <span class="s1">&#39;pl&#39;</span><span class="p">,</span> <span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;product_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;5578&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Parametr <strong>&#8216;country&#8217;</strong> i <strong>&#8216;language&#8217;</strong> jest wymagany. Wartość parametru <strong>&#8216;country&#8217;</strong> przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru <strong>&#8216;language&#8217;</strong> przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.</p>
+<p>Parametr <strong>&#8216;quantity&#8217;</strong> powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zwiększamy ilość o 2j. (czyli w sumie na 5j.) wartość parametru <strong>&#8216;quantity&#8217;</strong> będzie wynosić 5.</p>
+</div>
+<div class="section" id="przejscia-na-strone-gdzie-klient-podaje-dane-osobowe">
+<h2>Przejścia na stronę, gdzie klient podaje dane osobowe<a class="headerlink" href="#przejscia-na-strone-gdzie-klient-podaje-dane-osobowe" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartregistration&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartregistration&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="przejscia-na-strone-gdzie-klient-wybiera-forme-dostarczenia-produktu">
+<h2>Przejścia na stronę, gdzie klient wybiera formę dostarczenia produktu<a class="headerlink" href="#przejscia-na-strone-gdzie-klient-wybiera-forme-dostarczenia-produktu" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartdelivery&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartdelivery&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="przejscia-do-platnosci-z-poziomu-koszyka">
+<h2>Przejścia do płatności z poziomu koszyka<a class="headerlink" href="#przejscia-do-platnosci-z-poziomu-koszyka" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartpayment&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartpayment&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="przejscia-na-podsumowanie-koszyka-zakupu">
+<h2>Przejścia na podsumowanie koszyka/zakupu<a class="headerlink" href="#przejscia-na-podsumowanie-koszyka-zakupu" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartsummary&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartsummary&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="przejscia-na-potwierdzenie-koszyka-zakupu">
+<h2>Przejścia na potwierdzenie koszyka/zakupu<a class="headerlink" href="#przejscia-na-potwierdzenie-koszyka-zakupu" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartconfirm&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartconfirm&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="finalizacji-zakupu-po-zaplacie-za-towar">
+<h2>Finalizacji zakupu (po zapłacie za towar)<a class="headerlink" href="#finalizacji-zakupu-po-zaplacie-za-towar" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="nx">sareX_params</span><span class="p">.</span><span class="nx">event</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;params&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartpurchased&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">execute_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_email&#39;</span> <span class="o">:</span> <span class="s1">&#39;abc@def&#39;</span><span class="p">,</span> <span class="s1">&#39;_cartpurchased&#39;</span> <span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart_id&#39;</span> <span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}};</span>
+<span class="nx">sareX_core</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="nx">execute_params</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="form_events.html" class="btn btn-neutral float-right" title="Przechwytywanie informacji z formularzy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="events.html" class="btn btn-neutral" title="Wysyłanie zdarzeń" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, SARE S.A.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
