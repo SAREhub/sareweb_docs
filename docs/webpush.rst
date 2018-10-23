@@ -46,7 +46,22 @@ W kodzie strony musi znajdować się podstawowy kod śledzący SAREweb oraz doda
          mode: 'popup'
       }
    });
+
+
+lub z parametrem **mode: popover**.
    
+.. code-block:: javascript
+
+   (function (p){window['sareX_params']=p;var s=document.createElement('script');
+   s.src='//x.sare25.com/libs/sarex4.min.js';
+   s.async=true;var t=document.getElementsByTagName('script')[0];
+   t.parentNode.insertBefore(s,t);
+   })({
+      domain : 'brak.pl',
+      webPush: {
+         mode: 'popover'
+      }
+   });
 
 Powiadomienia będą wysyłane z domeny sarepush.com
 
