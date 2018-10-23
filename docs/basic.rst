@@ -39,7 +39,7 @@ Parametr, który blokuje działanie skryptów śledzących podczas przeglądania
 
 .. code-block:: javascript
 
-   DoNotTrack : true
+   doNotTrack : true
 
 
 
