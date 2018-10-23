@@ -34,4 +34,12 @@ Do podmiany:
 
 
 
+Parametr, który blokuje działanie skryptów śledzących podczas przeglądania strony przez użytkownika.
+
+
+.. code-block:: javascript
+
+   DoNotTrack : true
+
+
 
