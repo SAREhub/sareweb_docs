@@ -48,7 +48,7 @@ W kodzie strony musi znajdować się podstawowy kod śledzący SAREweb oraz doda
    });
 
 
-lub z parametrem **mode: popover**.
+lub z parametrem **mode: popover**:
    
 .. code-block:: javascript
 
@@ -62,6 +62,7 @@ lub z parametrem **mode: popover**.
          mode: 'popover'
       }
    });
+
 
 Powiadomienia będą wysyłane z domeny sarepush.com
 
