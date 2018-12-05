@@ -48,13 +48,13 @@ Dodania produktu do koszyka
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : false, '_cartadd' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '1', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1, 'name' : 'Nazwa produktu', 'url' : 'URL produktu', 'extra': {'size': 'rozmiar', 'color' : 'kolor'}, 'category':[{'id': 'nazwa kategorii'}, {'id': 'nazwa kategorii2'}]}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : false, '_cartadd' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1, 'name' : 'Nazwa produktu', 'url' : 'URL produktu', 'extra': {'size': 'rozmiar', 'color' : 'kolor'}, 'category':[{'id': 'nazwa kategorii'}, {'id': 'nazwa kategorii2'}]}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : false, '_cartadd' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '1', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1, 'name' : 'Nazwa produktu', 'url' : 'URL produktu', 'extra': {'size': 'rozmiar', 'color' : 'kolor'}, 'category':[{'id': 'nazwa kategorii'}, {'id': 'nazwa kategorii2'}]}};
+   var execute_params = {'_userId': '123', '_email' : false, '_cartadd' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1, 'name' : 'Nazwa produktu', 'url' : 'URL produktu', 'extra': {'size': 'rozmiar', 'color' : 'kolor'}, 'category':[{'id': 'nazwa kategorii'}, {'id': 'nazwa kategorii2'}]}};
    sareX_core.execute(10, execute_params);
 
 Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.
@@ -69,14 +69,14 @@ Usunięcia produktu z koszyka
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '1', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1}}};
 
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '1', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1}};
    sareX_core.execute(10, execute_params);
 
 Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.
@@ -93,14 +93,14 @@ Parametr 'quantity' przyjmuje wartość na jaką ustawiana jest liczba danego pr
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartquantity' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '1', 'product_id' : '5578', 'quantity' : 1}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartquantity' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'quantity' : 1}}};
 
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartquantity' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '1', 'product_id' : '5578', 'quantity' : 1}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartquantity' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'quantity' : 1}};
    sareX_core.execute(10, execute_params);
 
 
@@ -113,13 +113,13 @@ Przejścia na stronę, gdzie klient podaje dane osobowe
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartregistration' : {'cart_id' : '1'}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartregistration' : {'cart_id' : ''}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartregistration' : {'cart_id' : '1'}}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartregistration' : {'cart_id' : ''}}};
    sareX_core.execute(10, execute_params);
 
 Przejścia na stronę, gdzie klient wybiera formę dostarczenia produktu
@@ -127,13 +127,13 @@ Przejścia na stronę, gdzie klient wybiera formę dostarczenia produktu
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartdelivery' : {'cart_id' : '1'}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartdelivery' : {'cart_id' : ''}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdelivery' : {'cart_id' : '1'}}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdelivery' : {'cart_id' : ''}}};
    sareX_core.execute(10, execute_params);
 
 
@@ -142,13 +142,13 @@ Przejścia do płatności z poziomu koszyka
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartpayment' : {'cart_id' : '1'}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartpayment' : {'cart_id' : ''}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartpayment' : {'cart_id' : '1'}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartpayment' : {'cart_id' : ''}};
    sareX_core.execute(10, execute_params);
 
 Przejścia na podsumowanie koszyka/zakupu
@@ -156,13 +156,13 @@ Przejścia na podsumowanie koszyka/zakupu
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartsummary' : {'cart_id' : '1'}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartsummary' : {'cart_id' : ''}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartsummary' : {'cart_id' : '1'}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartsummary' : {'cart_id' : ''}};
    sareX_core.execute(10, execute_params);
 
 Przejścia na potwierdzenie koszyka/zakupu
@@ -170,13 +170,13 @@ Przejścia na potwierdzenie koszyka/zakupu
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartconfirm' : {'cart_id' : '1'}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartconfirm' : {'cart_id' : ''}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartconfirm' : {'cart_id' : '1'}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartconfirm' : {'cart_id' : ''}};
    sareX_core.execute(10, execute_params);
 
 Finalizacji zakupu (po zapłacie za towar)
@@ -184,11 +184,11 @@ Finalizacji zakupu (po zapłacie za towar)
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartpurchased' : {'cart_id' : '1'}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartpurchased' : {'cart_id' : ''}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartpurchased' : {'cart_id' : '1'}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartpurchased' : {'cart_id' : ''}};
    sareX_core.execute(10, execute_params);
