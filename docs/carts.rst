@@ -113,13 +113,13 @@ Zdarzenie wysyłane w momencie rozpoczęcia procesu zamówienia
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartinitialized' : {'cart_id' : '1'}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartinitialized' : {'cart_id' : ''}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartinitialized' : {'cart_id' : '1'}}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartinitialized' : {'cart_id' : ''}}};
    sareX_core.execute(10, execute_params);
 
 Przejścia na stronę, gdzie klient podaje dane osobowe
