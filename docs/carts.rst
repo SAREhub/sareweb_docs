@@ -69,14 +69,14 @@ Usunięcia produktu z koszyka
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln'}}};
 
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln'}};
    sareX_core.execute(10, execute_params);
 
 Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.
