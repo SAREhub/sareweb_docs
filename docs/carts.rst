@@ -2,25 +2,24 @@
 Zdarzenia koszykowe
 ############################
 
-Jeśli adres email nie jest znany w momencie wykonania któregoś z powyższy zdarzeń, wartość parametru **'_email'** będzie pusta (lub null).
-
-W celu identyfikacji zalogowanego użytkownika należy przekazać jego własny niepowtarzalny identyfikator w parametrze **'_userId'**. 
-Parametr **'_userId'** powinien być wysyłany wraz z każdym zdarzeniem zalogowanego użytkownika. 
-Jeśli identyfikatorem użytkownika jest adres email to wartość  **'_userId'** i **'_email'** powinna być taka sama. 
-Jeśli adres email nie jest znany po zalogowaniu użytkownika, wartość parametru **'_email'** będzie pusta (lub null). 
+W celu identyfikacji zalogowanego użytkownika należy przekazać jego unikalny identyfikator w parametrze **'_userId'** oraz adres e-mail w parametrze **'_email'**.
+Parametry **'_userId'** i **'_email'** powinny być wysyłane wraz z każdym zdarzeniem zalogowanego użytkownika.
+Jeśli adres e-mail **_email** lub **_userId** nie jest znany w momencie wykonania któregoś z poniższych zdarzeń to wartość powinna być pusta (lub null).
+Jeśli identyfikatorem użytkownika jest adres e-mail to wartość  **'_userId'** i **'_email'** powinna być taka sama.
+Jeśli adres e-mail nie jest znany po zalogowaniu użytkownika, wartość parametru **'_email'** będzie pusta (lub null).
 
 Przejście kategorię produktu
 =======================================
 
 .. code-block:: javascript
 
-   sareX_params.tag = {'_userId': '123', '_email': 'abc@def', '_category':{'country' : 'PL', 'language': 'pl', 'id': 'nazwa kategorii'}};
+   sareX_params.tag = {'_userId': '123', '_email': 'abc@def', '_category': {'country' : 'PL', 'language': 'pl', 'id': 'nazwa kategorii'}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-	var execute_params = {'_userId': '123', '_email': 'abc@def', '_category':{'country' : 'PL', 'language': 'pl', 'id': 'nazwa kategorii'}};
+	var execute_params = {'_userId': '123', '_email': 'abc@def', '_category': {'country' : 'PL', 'language': 'pl', 'id': 'nazwa kategorii'}};
 	sareX_core.execute(10, execute_params);
 
 Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.
@@ -31,16 +30,16 @@ Przejście na stronę produktu
 
 .. code-block:: javascript
 
-   sareX_params.tag = {'_userId': '123', '_email': 'abc@def', '_product':{'country' : 'PL', 'language': 'pl', 'id': '1', 'name':'nazwa produktu', 'price' : 59.00, 'currency' : 'pln', 'url' : 'URL produktu', 'category':[{'id': 'nazwa kategorii'}, {'id': 'nazwa kategorii2'}]}};
+   sareX_params.tag = {'_userId': '123', '_email': 'abc@def', '_product': {'country' : 'PL', 'language': 'pl', 'id': '1', 'url' : 'URL produktu' }};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-	var execute_params = {'_userId': '123', '_email': 'abc@def', '_product':{'country' : 'PL', 'language': 'pl', 'id': '1', 'name':'nazwa produktu', 'price' : 59.00, 'currency' : 'pln', 'url' : 'URL produktu', 'category':[{'id': 'nazwa kategorii'}, {'id': 'nazwa kategorii2'}]}};
+	var execute_params = {'_userId': '123', '_email': 'abc@def', '_product': {'country' : 'PL', 'language': 'pl', 'id': '1', 'url' : 'URL produktu'}};
 	sareX_core.execute(10, execute_params);
 
-Parametr **'country'**, **'language'** i **'id'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1. Parametr **'id'** to identyfikator produktu. Jeśli jest dostarczany product feed, wówczas parametr **'category'** jest opcjonalny (wycinamy go, jeśli nie chcemy go dostarczać)
+Parametr **'country'**, **'language'** i **'id'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1. Parametr **'id'** to identyfikator produktu.
 
 
 Dodania produktu do koszyka
@@ -48,20 +47,18 @@ Dodania produktu do koszyka
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : false, '_cartadd' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1, 'name' : 'Nazwa produktu', 'url' : 'URL produktu', 'extra': {'size': 'rozmiar', 'color' : 'kolor'}, 'category':[{'id': 'nazwa kategorii'}, {'id': 'nazwa kategorii2'}]}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : false, '_cartadd' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '1', 'quantity' : 1, 'url' : 'URL produktu'}}};
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : false, '_cartadd' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln', 'quantity' : 1, 'name' : 'Nazwa produktu', 'url' : 'URL produktu', 'extra': {'size': 'rozmiar', 'color' : 'kolor'}, 'category':[{'id': 'nazwa kategorii'}, {'id': 'nazwa kategorii2'}]}};
+   var execute_params = {'_userId': '123', '_email' : false, '_cartadd' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '1', 'quantity' : 1, 'url' : 'URL produktu'}};
    sareX_core.execute(10, execute_params);
 
 Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.
 
 Parametr **'quantity'** powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zwiększamy ilość o 2j. (czyli w sumie na 5j.) wartość parametru **'quantity'** będzie wynosić 5.
-
-Parametr **'price'** powinien przyjmować wartość ceny jednostkowej produktu.
 
 
 Usunięcia produktu z koszyka
@@ -69,21 +66,19 @@ Usunięcia produktu z koszyka
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln'}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '1'}}};
 
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'price' : 99.00, 'currency' : 'pln'}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdel' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '1'}};
    sareX_core.execute(10, execute_params);
 
 Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.
 
 Parametr **'quantity'** powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zmniejszamy ilość o 2j. (czyli w sumie na 1j.) wartość parametru **'quantity'** będzie wynosić 1.
-
-Parametr **'price'** powinien przyjmować wartość ceny jednostkowej produktu.
 
 
 Zwiększenie/zmniejszenie liczby produktu w koszyku
@@ -93,14 +88,14 @@ Parametr 'quantity' przyjmuje wartość na jaką ustawiana jest liczba danego pr
 
 .. code-block:: javascript
 
-   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartquantity' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'quantity' : 1}}};
+   sareX_params.event = {'id': '10', 'params' : {'_userId': '123', '_email' : 'abc@def', '_cartquantity' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '1', 'quantity' : 1}}};
 
 
 W przypadku gdy zdarzenie wywoływane jest bez ponownego wejścia na stronę (odświeżenia) należy wywołać metodę:
 
 .. code-block:: javascript
 
-   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartquantity' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '5578', 'quantity' : 1}};
+   var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartquantity' : {'country' : 'PL', 'language': 'pl', 'cart_id' : '', 'product_id' : '1', 'quantity' : 1}};
    sareX_core.execute(10, execute_params);
 
 
