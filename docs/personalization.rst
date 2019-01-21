@@ -13,16 +13,12 @@ Przykład:
 .. code-block:: javascript
 
     (function (p){window['sareX_params']=p;var s=document.createElement('script');
-    s.src='//x.sare25.com/libs/sarex2.lib.js';
-    s.async=true;var t=document.getElementsByTagName('script')[0];
+    s.src='//x.sare25.com/libs/sarex4.min.js';s.async=true;var t=document.getElementsByTagName('script')[0];
     t.parentNode.insertBefore(s,t);
     })({
-        domain : 'brak.pl',
-        ping : {'period0' : 30, 'period1' : 60},
-        execute : true,
-        sareX_ip : false,
-        personalization_callback: personalization_handler,
-        personalization_subject: ["popup"]
+      domain : 'brak.pl',
+      personalization_callback: personalization_handler,
+      personalization_subject: ["popup"]
     });
 
     function personalization_handler(msg){

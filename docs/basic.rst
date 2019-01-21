@@ -13,7 +13,10 @@ Podstawowy kod śledzący SAREweb, który należy wstawić na stronie internetow
    });
 
 
-Dodatkowy parametr, który jest potrzebny do monitorowania czasu spędzonego na stronach.
+Dodatkowe parametry do kodu śledzącego
+=======================================
+
+Dodatkowy parametr wymagany do monitorowania czasu spędzonego na stronach.
 
 .. code-block:: javascript
 
