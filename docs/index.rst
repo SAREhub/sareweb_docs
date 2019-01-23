@@ -1,5 +1,5 @@
 #####
-Wstęp
+Spis treści
 #####
 
 .. toctree::
@@ -13,8 +13,8 @@ Wstęp
     basic
     tags
     webpush
-    events
     carts
+    events
     form_events
     personalization
 

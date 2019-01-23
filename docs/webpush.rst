@@ -6,8 +6,9 @@ Powiadomienia Push
 Dla stron z protokołem HTTPS
 =======================================
 
-Wymagany jest protokół HTTPS.
-W kodzie strony musi znajdować się podstawowy kod śledzący SAREweb oraz dodatkowy parametr **webPush**.
+Ten sposób integracji jest możliwy tylko dla domen https oraz wymaga umieszczenia dwóch plików na serwerze.
+
+1. Podstawowy kod śledzący SAREweb musi być umieszczony na stronie z dodatkowym parametrem **webPush**.
 
 .. code-block:: javascript
 
@@ -17,22 +18,27 @@ W kodzie strony musi znajdować się podstawowy kod śledzący SAREweb oraz doda
    t.parentNode.insertBefore(s,t);
    })({
       domain : 'brak.pl',
-      webPush: {}
+      webPush : {}
    });
 
 
-Następnie pobierz SDK: https://x.sare25.com/libs/sareweb_webpush.zip
+2. Pobierz paczkę ze skryptami. Pobrany pakiet będzie zawierał dwa skrypty: **manifest.json** i **sw.js**.
 
+Link do paczki: https://x.sare25.com/libs/sareweb_webpush.zip
 
-Na koniec rozpakuj pliki SDK (**minifest.json** i **sw.js**) i dodaj je do głównego foldera (root) Twojej strony.
-
+3. Na koniec rozpakuj paczkę i dodaj pliki **minifest.json** i **sw.js** je do głównego folderu (root) strony.
 
 
 Dla stron z protokołem HTTP
 =======================================
 
-Nie jest wymagany protokół HTTPS.
-W kodzie strony musi znajdować się podstawowy kod śledzący SAREweb oraz dodatkowy parametr **webPush** z parametrem **mode: popup**.
+W tym sposobie integracji nie jest wymagany protokół HTTPS. Powiadomienia będą wysyłane z domeny **twoj-idetyfikator**.sarepush.com
+
+1. Podstawowy kod śledzący SAREweb musi być umieszczony na stronie z dodatkowym parametrem **webPush**.
+
+W kodzie strony musi znajdować się podstawowy kod śledzący SAREweb oraz dodatkowy parametr **webPush**
+
+opcja: **mode : popup**
 
 .. code-block:: javascript
 
@@ -42,13 +48,13 @@ W kodzie strony musi znajdować się podstawowy kod śledzący SAREweb oraz doda
    t.parentNode.insertBefore(s,t);
    })({
       domain : 'brak.pl',
-      webPush: {
-         mode: 'popup'
+      webPush : {
+         mode : 'popup'
       }
    });
 
 
-lub z parametrem **mode: popover**:
+opcja: **mode: popover**
    
 .. code-block:: javascript
 
@@ -58,11 +64,11 @@ lub z parametrem **mode: popover**:
    t.parentNode.insertBefore(s,t);
    })({
       domain : 'brak.pl',
-      webPush: {
-         mode: 'popover'
+      webPush : {
+         mode : 'popover'
       }
    });
 
 
-Powiadomienia będą wysyłane z domeny sarepush.com
+
 
