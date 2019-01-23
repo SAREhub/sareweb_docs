@@ -42,6 +42,13 @@ Parametr, który blokujący działanie skryptów śledzących podczas przegląda
    doNotTrack : true
 
 
+Parametr, który jest odpowiedzialny za wyświetlanie zgody WebPush. `Szczegółowe informacje są tutaj <https://sareweb.readthedocs.io/pl/latest/webpush.html>`_
+
+.. code-block:: javascript
+
+   webPush: {}
+
+
 Przykład kodu śledzącego z dodatkowymi parametrami
 =======================================
 
