@@ -1,5 +1,5 @@
 ############################
-Powiadomienia Push
+Powiadomienia WebPush
 ############################
 
 
