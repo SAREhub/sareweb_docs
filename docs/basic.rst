@@ -14,7 +14,7 @@ Podstawowy kod śledzący SAREweb, który należy wstawić w kodzie źródłowym
 
 
 Dodatkowe parametry do kodu śledzącego
-=======================================
+----------------
 
 Dodatkowy parametr wymagany do monitorowania czasu spędzonego na stronie internetowej.
 
@@ -38,7 +38,7 @@ Parametr, który blokujący działanie skryptów śledzących podczas przegląda
 
 
 Przykład kodu śledzącego z dodatkowymi parametrami
-==================================================
+----------------
 
 .. code-block:: javascript
 
