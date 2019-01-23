@@ -1,7 +1,7 @@
 Podstawowy kod śledzący
 =======================================
 
-Podstawowy kod śledzący SAREweb, który należy wstawić na stronie internetowej (pamiętając o podmianie domeny zawartej wewnątrz kodu):
+Podstawowy kod śledzący SAREweb, który należy wstawić w kodzie źródłowym strony internetowej (pamiętając o podmianie identyfikatora wewnątrz kodu):
 
 .. code-block:: javascript
 
@@ -16,33 +16,37 @@ Podstawowy kod śledzący SAREweb, który należy wstawić na stronie internetow
 Dodatkowe parametry do kodu śledzącego
 =======================================
 
-Dodatkowy parametr wymagany do monitorowania czasu spędzonego na stronach.
+Dodatkowy parametr wymagany do monitorowania czasu spędzonego na stronie internetowej.
 
 .. code-block:: javascript
 
-   ping : {'period0' : 10, 'period1' : 60},
+   ping : true
 
 
-
-Dodatkowy parametr, który informuje system INIS o wejściu na stronę.
-Do podmiany:
-- <kampania> = nazwa kampanii (np. 'campaign01')
-- <strona> = nazwa strony (np. 'home')
-- <uidy_w_sare> = uid lub lista uidow w SARE oddzielonych przecinkiem ([12] lub [12,31668])
-
+Dodatkowy parametr wymagany do integracji z Inis (wysyłki na e-mail zewnętrzny).
 
 .. code-block:: javascript
 
-   inisTrack : {t:'p', c:'<kampania>',s:'<strona>', uid:[<uidy_w_sare>]}
+   inisTrack : true
 
 
-
-Parametr, który blokuje działanie skryptów śledzących podczas przeglądania strony przez użytkownika.
-
+Parametr, który blokujący działanie skryptów śledzących podczas przeglądania strony internetowej przez użytkownika.
 
 .. code-block:: javascript
 
    doNotTrack : true
 
 
+Przykład kodu śledzącego z dodatkowymi parametrami
+==================================================
 
+.. code-block:: javascript
+
+   (function (p){window['sareX_params']=p;var s=document.createElement('script');
+   s.src='//x.sare25.com/libs/sarex4.min.js';s.async=true;var t=document.getElementsByTagName('script')[0];
+   t.parentNode.insertBefore(s,t);
+   })({
+      domain : 'brak.pl',
+      ping : true,
+      inisTrack : true
+   });
