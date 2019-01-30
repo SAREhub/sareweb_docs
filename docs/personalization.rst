@@ -6,7 +6,7 @@ Podstawowy kod śledzący SAREweb, który należy wstawić stronie serwisu nale�
 - **personalization_subject** - stworzony wcześniej w panelu SAREhub identyfikator personalizacji. Pozwala na personalizowanie konkretnej podstrony. Parametr jest tablicą co umożliwia podanie kilku identyfikatorów personalizacji.
 
 
-.. image:: _static/personalization.png
+.. image:: _static/personalizcja.png
 
 
 - **personalization_callback** - funkcja callback przygotowana w Javascript, która wyzwoli personalizację np. personalization_handler.
