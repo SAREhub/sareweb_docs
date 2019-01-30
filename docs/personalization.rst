@@ -1,19 +1,7 @@
 Personalizacja na stronie
 =======================================
 
-Podstawowy kod śledzący SAREweb, który należy wstawić stronie serwisu należy wzbogacić o dwa dodatkowe parametry **personalization_subject** oraz **personalization_callback**.
-
-- **personalization_subject** - stworzony wcześniej w panelu SAREhub identyfikator personalizacji. Pozwala na personalizowanie konkretnej podstrony. Parametr jest tablicą co umożliwia podanie kilku identyfikatorów personalizacji.
-
-
-.. image:: _static/personalizcja.png
-
-
-- **personalization_callback** - funkcja callback przygotowana w Javascript, która wyzwoli personalizację np. personalization_handler.
-
-
-
-
+Podstawowy kod śledzący SAREweb, który należy wstawić stronie internetowej należy wzbogacić o dwa dodatkowe parametry **personalization_subject** oraz **personalization_callback**.
 
 Przykład:
 
@@ -37,4 +25,11 @@ Przykład:
     }
 
 
-Użyty parametr SAREhub_custom_229_typ jest przykładem, w panelu SAREhub można wyświtlić dostępne parametry dla personalizacji.
+- **personalization_subject** - stworzony wcześniej w panelu SAREhub dowolny identyfikator personalizacji (bloczek **Personalizacja na stronie**). Pozwala na personalizowanie konkretnej podstrony. Parametr jest tablicą co umożliwia podanie kilku identyfikatorów personalizacji. Do prawidłowego działania personalizacji wymagane jest ustawienie takich samych identyfikatrów zarówno w kodzie jak i bloczku **Perosnalizacja na stronie**
+
+.. image:: _static/personalizcja.png
+
+- **personalization_callback** - funkcja callback przygotowana w Javascript, która wyzwoli personalizację np. personalization_handler.
+
+
+
