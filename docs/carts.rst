@@ -12,7 +12,7 @@ Jeśli identyfikatorem użytkownika jest adres e-mail to wartość  **'_userId'*
 
 Jeśli adres e-mail nie jest znany po zalogowaniu użytkownika, wartość parametru **'_email'** będzie pusta (lub null).
 
-Przejście kategorię produktu
+Przejście w kategorię produktu
 =======================================
 
 .. code-block:: javascript
