@@ -85,7 +85,7 @@ Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'co
 Parametr **'quantity'** powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zmniejszamy ilość o 2j. (czyli w sumie na 1j.) wartość parametru **'quantity'** będzie wynosić 1.
 
 
-Zwiększenie/zmniejszenie liczby produktu w koszyku
+Zmiana liczby produktów w koszyku
 ==============================================================================
 
 Parametr 'quantity' przyjmuje wartość na jaką ustawiana jest liczba danego produktu podczas jej edycji:
@@ -107,7 +107,7 @@ Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'co
 
 Parametr **'quantity'** powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zwiększamy ilość o 2j. (czyli w sumie na 5j.) wartość parametru **'quantity'** będzie wynosić 5.
 
-Zdarzenie wysyłane w momencie rozpoczęcia procesu zamówienia
+Rozpoczęcie procesu zamówienia
 ============================================================
 
 .. code-block:: javascript
@@ -121,7 +121,7 @@ W przypadku gdy zdarzenie powinno zostać wywołane dynamicznie czyli bez ponown
    var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartinitialized' : {'cart_id' : ''}}};
    sareX_core.execute(10, execute_params);
 
-Przejścia na stronę, gdzie klient podaje dane osobowe
+Podanie danych osobowych
 ============================================================
 
 .. code-block:: javascript
@@ -135,7 +135,7 @@ W przypadku gdy zdarzenie powinno zostać wywołane dynamicznie czyli bez ponown
    var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartregistration' : {'cart_id' : ''}}};
    sareX_core.execute(10, execute_params);
 
-Przejścia na stronę, gdzie klient wybiera formę dostarczenia produktu
+Wybór formy dostarczenia
 ==============================================================================
 
 .. code-block:: javascript
@@ -149,7 +149,7 @@ W przypadku gdy zdarzenie powinno zostać wywołane dynamicznie czyli bez ponown
    var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartdelivery' : {'cart_id' : ''}}};
    sareX_core.execute(10, execute_params);
 
-Przejścia do płatności z poziomu koszyka
+Wybór sposobu płatności
 ===========================================
 
 .. code-block:: javascript
@@ -163,7 +163,7 @@ W przypadku gdy zdarzenie powinno zostać wywołane dynamicznie czyli bez ponown
    var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartpayment' : {'cart_id' : ''}};
    sareX_core.execute(10, execute_params);
 
-Przejścia na podsumowanie koszyka/zakupu
+Podsumowanie koszyka
 ============================================
 
 .. code-block:: javascript
@@ -177,7 +177,7 @@ W przypadku gdy zdarzenie powinno zostać wywołane dynamicznie czyli bez ponown
    var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartsummary' : {'cart_id' : ''}};
    sareX_core.execute(10, execute_params);
 
-Przejścia na potwierdzenie koszyka/zakupu
+Potwierdzenie zakupu
 ===========================================
 
 .. code-block:: javascript
@@ -191,7 +191,7 @@ W przypadku gdy zdarzenie powinno zostać wywołane dynamicznie czyli bez ponown
    var execute_params = {'_userId': '123', '_email' : 'abc@def', '_cartconfirm' : {'cart_id' : ''}};
    sareX_core.execute(10, execute_params);
 
-Finalizacji zakupu (po zapłacie za towar)
+Finalizacja zakupu
 ============================================
 
 .. code-block:: javascript
