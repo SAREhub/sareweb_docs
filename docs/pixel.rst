@@ -151,3 +151,24 @@ Finalizacja zakupu
 
    https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_checkout_completed
 
+
+
+
+Przykłady wywolania
+---------------------------------------
+
+Wywołanie z użyciem jQuery:
+
+.. code-block:: javascript
+
+    $.get('https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_added_product&product_id=1&quantity=2');
+
+
+
+Osadzenie w kodzie HTML:
+
+.. code-block:: HTML
+
+    <img height="1" width="1" src="https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_added_product&product_id=1&quantity=2">
+
+
