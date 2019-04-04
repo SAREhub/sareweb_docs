@@ -31,7 +31,10 @@ Podczas wysyłania zdarzen będziemy mieli do czynienia z ustawieniem parametró
         - cart_checkout_confirm,
         - cart_checkout_completed
     - **product_id** - Identyfikator produktu zgodny z product feedem.
-    - **quantity** - Przyjmuje ilość produktów. Dotyczy takich zdarzeń jak cart_added_product, cart_removed_product i cart_changed_product_quantity.
+    - **quantity** - Przyjmuje ilość produktów. Dotyczy tylko zdarzeń:
+        - cart_added_product,
+        - cart_removed_product,
+        - cart_changed_product_quantity
     - **cart_id** - Nie jest wymagany. Przyjmuje unikalny identyfikator koszyka.
     - **country** - Nie jest wymagany. Domyślnie zostanie ustawiona wartości **PL**. Przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2.
     - **language** - Nie jest wymagany. Domyślnie zostanie ustawiona wartości **pl**. Przyjmuje wartość języka w jakim przygotowany jest product feed w formacie ISO 639-1.
