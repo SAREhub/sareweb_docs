@@ -15,10 +15,21 @@ Podstawy wdrożenia i testów
 Zanim zaczniesz wywoływać piksel śledzący pamiętaj, aby poznać swój unikalny identyfikator z panelu SAREhub.
 Podczas wysyłania zdarzen będziemy mieli do czynienia z ustawieniem parametrów takich jak:
 
-    - **domain** - Unikalny identyfikator z panelu SAREhub
+    - **domain** - Unikalny identyfikator z panelu SAREhub.
     - **email** -  Nie jest wymagany. Adres email użytkownika.
     - **user_id** - Nie jest wymagany. Unikalny identyfikator użytkownika.
-    - **cart_event** - Przyjmuje typ zdarzenia koszykowego. Należy wybrać jedno z: category_seen, product_seen, cart_added_product, cart_removed_product, cart_changed_product_quantity, cart_checkout_started, cart_checkout_delivery, cart_checkout_payment, cart_checkout_summary, cart_checkout_confirm, cart_checkout_completed.
+    - **cart_event** - Przyjmuje typ zdarzenia koszykowego. Należy wybrać jedno z:
+        - category_seen,
+        - product_seen,
+        - cart_added_product,
+        - cart_removed_product,
+        - cart_changed_product_quantity,
+        - cart_checkout_started,
+        - cart_checkout_delivery,
+        - cart_checkout_payment,
+        - cart_checkout_summary,
+        - cart_checkout_confirm,
+        - cart_checkout_completed
     - **product_id** - Identyfikator produktu zgodny z product feedem.
     - **quantity** - Przyjmuje ilość produktów. Dotyczy takich zdarzeń jak cart_added_product, cart_removed_product i cart_changed_product_quantity.
     - **cart_id** - Nie jest wymagany. Przyjmuje unikalny identyfikator koszyka.
@@ -40,8 +51,12 @@ Poprzez wysyłanie zdarzeń można dodatkowo otagować użytkownika w SAREhub:
     - **tags** - przyjmuje pojedyńczy tag lub listę tagów rozdzielonych przecinkiem.
 
 
-Przejście w kategorię produktu
+Przykłady wdrażania i testów
 =======================================
+
+
+Przejście w kategorię produktu
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -49,7 +64,7 @@ Przejście w kategorię produktu
 
 
 Przejście na stronę produktu
-=======================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -57,7 +72,7 @@ Przejście na stronę produktu
 
 
 Dodania produktu do koszyka
-=======================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -67,7 +82,7 @@ Parametr **quantity** powinien przyjmować wartość aktualnego stanu ilości pr
 
 
 Usunięcia produktu z koszyka
-=======================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -77,7 +92,7 @@ Parametr **quantity** powinien przyjmować wartość aktualnego stanu ilości pr
 
 
 Zmiana liczby produktów w koszyku
-==============================================================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -87,7 +102,7 @@ Parametr **quantity** powinien przyjmować wartość aktualnego stanu ilości pr
 
 
 Rozpoczęcie procesu zamówienia
-============================================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -95,7 +110,7 @@ Rozpoczęcie procesu zamówienia
 
 
 Wybór formy dostarczenia
-==============================================================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -103,7 +118,7 @@ Wybór formy dostarczenia
 
 
 Wybór sposobu płatności
-===========================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -111,7 +126,7 @@ Wybór sposobu płatności
 
 
 Podsumowanie koszyka
-============================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -119,7 +134,7 @@ Podsumowanie koszyka
 
 
 Potwierdzenie zakupu
-===========================================
+---------------------------------------
 
 .. code-block:: javascript
 
@@ -127,7 +142,7 @@ Potwierdzenie zakupu
 
 
 Finalizacja zakupu
-============================================
+---------------------------------------
 
 .. code-block:: javascript
 
