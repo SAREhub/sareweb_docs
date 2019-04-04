@@ -10,17 +10,18 @@ Ten sposób integracji jest możliwy tylko dla domen https oraz wymaga umieszcze
 
 1. Podstawowy kod śledzący SAREweb musi być umieszczony na stronie z dodatkowym parametrem **webPush**.
 
-.. code-block:: javascript
+.. code-block:: HTML
 
-   (function (p){window['sareX_params']=p;var s=document.createElement('script');
-   s.src='//x.sare25.com/libs/sarex4.min.js';
-   s.async=true;var t=document.getElementsByTagName('script')[0];
-   t.parentNode.insertBefore(s,t);
-   })({
-      domain : 'brak.pl',
-      webPush : {}
-   });
-
+    <script>
+       (function (p){window['sareX_params']=p;var s=document.createElement('script');
+       s.src='//x.sare25.com/libs/sarex4.min.js';
+       s.async=true;var t=document.getElementsByTagName('script')[0];
+       t.parentNode.insertBefore(s,t);
+       })({
+          domain : 'brak.pl',
+          webPush : {}
+       });
+    <script>
 
 2. Pobierz paczkę ze skryptami. Pobrany pakiet będzie zawierał dwa skrypty: **manifest.json** i **sw.js**.
 
@@ -40,34 +41,38 @@ W kodzie strony musi znajdować się podstawowy kod śledzący SAREweb oraz doda
 
 opcja: **mode : popup**
 
-.. code-block:: javascript
+.. code-block:: HTML
 
-   (function (p){window['sareX_params']=p;var s=document.createElement('script');
-   s.src='//x.sare25.com/libs/sarex4.min.js';
-   s.async=true;var t=document.getElementsByTagName('script')[0];
-   t.parentNode.insertBefore(s,t);
-   })({
-      domain : 'brak.pl',
-      webPush : {
-         mode : 'popup'
-      }
-   });
+    <script>
+       (function (p){window['sareX_params']=p;var s=document.createElement('script');
+       s.src='//x.sare25.com/libs/sarex4.min.js';
+       s.async=true;var t=document.getElementsByTagName('script')[0];
+       t.parentNode.insertBefore(s,t);
+       })({
+          domain : 'brak.pl',
+          webPush : {
+             mode : 'popup'
+          }
+       });
+    </html>
 
 
 opcja: **mode: popover**
    
 .. code-block:: javascript
 
-   (function (p){window['sareX_params']=p;var s=document.createElement('script');
-   s.src='//x.sare25.com/libs/sarex4.min.js';
-   s.async=true;var t=document.getElementsByTagName('script')[0];
-   t.parentNode.insertBefore(s,t);
-   })({
-      domain : 'brak.pl',
-      webPush : {
-         mode : 'popover'
-      }
-   });
+    <script>
+       (function (p){window['sareX_params']=p;var s=document.createElement('script');
+       s.src='//x.sare25.com/libs/sarex4.min.js';
+       s.async=true;var t=document.getElementsByTagName('script')[0];
+       t.parentNode.insertBefore(s,t);
+       })({
+          domain : 'brak.pl',
+          webPush : {
+             mode : 'popover'
+          }
+       });
+    </script>
 
 
 

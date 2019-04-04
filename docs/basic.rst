@@ -8,14 +8,16 @@ Podstawowy kod śledzący
 
 Podstawowy kod śledzący SAREweb, który należy wstawić w kodzie źródłowym strony internetowej (pamiętając o podmianie identyfikatora wewnątrz kodu):
 
-.. code-block:: javascript
+.. code-block::  HTML
 
-   (function (p){window['sareX_params']=p;var s=document.createElement('script');
-   s.src='//x.sare25.com/libs/sarex4.min.js';s.async=true;var t=document.getElementsByTagName('script')[0];
-   t.parentNode.insertBefore(s,t);
-   })({
-      domain : 'brak.pl'
-   });
+    <script>
+       (function (p){window['sareX_params']=p;var s=document.createElement('script');
+       s.src='//x.sare25.com/libs/sarex4.min.js';s.async=true;var t=document.getElementsByTagName('script')[0];
+       t.parentNode.insertBefore(s,t);
+       })({
+          domain : 'brak.pl'
+       });
+    </script>
 
 
 Dodatkowe parametry do kodu śledzącego
@@ -52,13 +54,15 @@ Parametr, który jest odpowiedzialny za wyświetlanie zgody WebPush. `Szczegół
 Przykład kodu śledzącego z dodatkowymi parametrami
 =======================================
 
-.. code-block:: javascript
+.. code-block:: HTML
 
-   (function (p){window['sareX_params']=p;var s=document.createElement('script');
-   s.src='//x.sare25.com/libs/sarex4.min.js';s.async=true;var t=document.getElementsByTagName('script')[0];
-   t.parentNode.insertBefore(s,t);
-   })({
-      domain : 'brak.pl',
-      ping : true,
-      inisTrack : true
-   });
+    <script>
+       (function (p){window['sareX_params']=p;var s=document.createElement('script');
+       s.src='//x.sare25.com/libs/sarex4.min.js';s.async=true;var t=document.getElementsByTagName('script')[0];
+       t.parentNode.insertBefore(s,t);
+       })({
+          domain : 'brak.pl',
+          ping : true,
+          inisTrack : true
+       });
+    </script>
