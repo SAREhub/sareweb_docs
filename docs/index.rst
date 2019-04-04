@@ -17,4 +17,6 @@ Spis treści
     events
     form_events
     personalization
+    pixel
+
 
