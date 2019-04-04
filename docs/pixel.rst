@@ -5,7 +5,7 @@ Piksel śledządzy
 
 Wstęp do wdrażania i testów
 =======================================
-Piksel śledządzy jest najprostszym sposobem integracji z SAREweb.
+Piksel śledzący jest najprostszym sposobem integracji z SAREweb.
 Wykorzystanie piksela śledzącego jest wygodniejsze, ponieważ cały proces będzie można zredukować nawet do umieszczenia pojedynczego linku na stronie.
 
 
@@ -13,7 +13,7 @@ Podstawy wdrożenia i testów
 =======================================
 
 Zanim zaczniesz wywoływać piksel śledzący pamiętaj, aby poznać swój unikalny identyfikator z panelu SAREhub.
-Podczas wysyłania zdarzen będziemy mieli do czynienia z ustawieniem parametrów takich jak:
+Podczas wysyłania zdarzeń będziemy mieli do czynienia z ustawieniem parametrów takich jak:
 
     - **domain** - Unikalny identyfikator z panelu SAREhub.
     - **email** -  Nie jest wymagany. Adres email użytkownika.
