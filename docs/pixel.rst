@@ -63,7 +63,7 @@ Przejście w kategorię produktu
 
 .. code-block:: javascript
 
-   https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=category_seen&product_id=1
+   https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=category_seen&category_id=1
 
 
 Przejście na stronę produktu
