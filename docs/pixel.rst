@@ -165,7 +165,7 @@ Wywołanie z użyciem jQuery:
 
 
 
-Osadzenie w kodzie HTML:
+Umieszcznie w kodzie HTML:
 
 .. code-block:: HTML
 
