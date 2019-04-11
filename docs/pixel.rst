@@ -33,7 +33,6 @@ Podczas wysyłania zdarzeń będziemy mieli do czynienia z ustawieniem parametr�
     - **product_id** - Identyfikator produktu zgodny z product feedem.
     - **quantity** - Przyjmuje ilość produktów. Dotyczy tylko zdarzeń:
         - cart_added_product,
-        - cart_removed_product,
         - cart_changed_product_quantity
     - **cart_id** - Nie jest wymagany. Przyjmuje unikalny identyfikator koszyka.
     - **country** - Nie jest wymagany. Domyślnie zostanie ustawiona wartości **PL**. Przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2.
@@ -81,17 +80,13 @@ Dodania produktu do koszyka
 
    https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_added_product&product_id=1&quantity=2
 
-Parametr **quantity** powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zwiększamy ilość o 2j. (czyli w sumie na 5j.) wartość parametru **quantity** będzie wynosić 5.
-
 
 Usunięcia produktu z koszyka
 ---------------------------------------
 
 .. code-block:: javascript
 
-   https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_removed_product&product_id=1&quantity=2
-
-Parametr **quantity** powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zmniejszamy ilość o 2j. (czyli w sumie na 1j.) wartość parametru **quantity** będzie wynosić 1.
+   https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_removed_product&product_id=1
 
 
 Zmiana liczby produktów w koszyku
@@ -150,7 +145,6 @@ Finalizacja zakupu
 .. code-block:: javascript
 
    https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_checkout_completed
-
 
 
 
