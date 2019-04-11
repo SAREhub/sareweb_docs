@@ -25,6 +25,7 @@ Podczas wysyłania zdarzeń będziemy mieli do czynienia z ustawieniem parametr�
         - cart_removed_product,
         - cart_changed_product_quantity,
         - cart_checkout_started,
+        - cart_checkout_registration
         - cart_checkout_delivery,
         - cart_checkout_payment,
         - cart_checkout_summary,
