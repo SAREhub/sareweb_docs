@@ -107,6 +107,14 @@ Rozpoczęcie procesu zamówienia
    https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_checkout_started
 
 
+Podanie danych osobowych
+---------------------------------------
+
+.. code-block:: javascript
+
+   https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_checkout_registration
+
+
 Wybór formy dostarczenia
 ---------------------------------------
 
