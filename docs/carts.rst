@@ -62,8 +62,6 @@ W przypadku gdy zdarzenie powinno zostać wywołane dynamicznie czyli bez ponown
 
 Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.
 
-Parametr **'quantity'** powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zwiększamy ilość o 2j. (czyli w sumie na 5j.) wartość parametru **'quantity'** będzie wynosić 5.
-
 
 Usunięcia produktu z koszyka
 =======================================
@@ -81,8 +79,6 @@ W przypadku gdy zdarzenie powinno zostać wywołane dynamicznie czyli bez ponown
    sareX_core.execute(10, execute_params);
 
 Parametr **'country'** i **'language'** jest wymagany. Wartość parametru **'country'** przyjmuje wartość kraju docelowego product feeda w formacie ISO 3166-1 alfa-2. Wartość parametru **'language'** przyjmuje wartość języka w jakim przygotowanych jest product feed w formacie ISO 639-1.
-
-Parametr **'quantity'** powinien przyjmować wartość aktualnego stanu ilości produktu w koszyku, przykładowo jeśli w koszyku były 3 jednostki danego produktu i zmniejszamy ilość o 2j. (czyli w sumie na 1j.) wartość parametru **'quantity'** będzie wynosić 1.
 
 
 Zmiana liczby produktów w koszyku
