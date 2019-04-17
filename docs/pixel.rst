@@ -164,8 +164,14 @@ Wywołanie z użyciem jQuery:
 
 .. code-block:: javascript
 
-    $.get('https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_added_product&product_id=1&quantity=2');
-
+    $.ajax({
+        url: ''https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_added_product&product_id=1&quantity=2'',
+        type: 'GET',
+        xhrFields: {
+            withCredentials: true
+        },
+        crossDomain: true
+    });
 
 Wywołanie za pomocą Fetch:
 
@@ -173,7 +179,7 @@ Wywołanie za pomocą Fetch:
 
     fetch('https://api.sare25.com/collect?domain=<unikalny_identyfikator>&email=<test@sarehub.pl>&cart_event=cart_added_product&product_id=1&quantity=2', {
         credentials: "include",
-         mode: "no-cors"
+        mode: "no-cors"
     });
 
 Umieszcznie w kodzie HTML:
