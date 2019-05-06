@@ -21,7 +21,7 @@ Ten sposób integracji jest możliwy tylko dla domen https oraz wymaga umieszcze
           domain : 'brak.pl',
           webPush : {}
        });
-    <script>
+    </script>
 
 2. Pobierz paczkę ze skryptami. Pobrany pakiet będzie zawierał dwa skrypty: **manifest.json** i **sw.js**.
 
@@ -54,7 +54,7 @@ opcja: **mode : popup**
              mode : 'popup'
           }
        });
-    </html>
+    </script>
 
 
 opcja: **mode: popover**

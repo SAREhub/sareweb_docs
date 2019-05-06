@@ -14,7 +14,7 @@ Podstawowy kod śledzący SAREweb, który należy wstawić w kodzie źródłowym
           domain : 'brak.pl',
           doNotTrack : true / false
        });
-    <script>
+    </script>
 
 W przypadku stron SPA jest możliwość dynamicznej zmiany opcji śledzenia poprzez wykorzystanie pomocniczych funkcji.
 
