@@ -37,7 +37,7 @@ Dodatkowy parametr wymagany do integracji z Inis (wysyłki na e-mail zewnętrzny
    inisTrack : true
 
 
-Parametr, który blokujący działanie skryptów śledzących podczas przeglądania strony internetowej przez użytkownika.
+Parametr, który blokujący działanie skryptów śledzących podczas przeglądania strony internetowej przez użytkownika. `Szczegółowe informacje są tutaj <https://sareweb.readthedocs.io/pl/latest/donottruck.html>`_
 
 .. code-block:: javascript
 

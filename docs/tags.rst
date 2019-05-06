@@ -9,7 +9,7 @@ Kod powinien znajdować się poniżej podstawowego kodu śledzącego.
    sareX_params.addUserTags = ['buty', 'ubrania'];
 
 
-W przypadku gdy gdy tagowanie użytkowników wywoływane jest dynamicznie, bez ponownego wejścia na stronę należy wywołać metodę:
+W przypadku gdy tagowanie użytkowników wywoływane jest dynamicznie, bez ponownego wejścia na stronę należy wywołać metodę:
 
 .. code-block:: javascript
 

@@ -11,6 +11,7 @@ Spis treści
     :maxdepth: 2
 
     basic
+    donottruck
     tags
     webpush
     carts
