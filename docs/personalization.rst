@@ -54,7 +54,7 @@ Przykład:
           "SAREhub_1_100_2_name": "Półbuty zamszowe Nikopol",
           "SAREhub_1_100_2_image": "https://via.placeholder.com/150"
         },
-        "hub_id": "1"
+        "hub_id": "100"
       }
     }
 
