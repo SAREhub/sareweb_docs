@@ -66,3 +66,19 @@ Przykład kodu śledzącego z dodatkowymi parametrami
           inisTrack : true
        });
     </script>
+
+
+Podstawowy kod śledzący - wersja uproszczona
+=======================================
+
+Wersja uproszczona różni się tym, że nie mamy możliwości konfigurowania parametrów w kodzie tak jak wyżej. Wszystkie zmiany są dokonywane bezpośrednio w panelu SAREhub (obrazek poniżej).
+
+Kod śledzący należy wstawić w kodzie źródłowym strony internetowej (pamiętając o podmianie identyfikatora wewnątrz kodu):
+
+.. code-block::  HTML
+
+    <script src="//cdn.sarehub.com/clients/brak-pl.js" async></script>
+
+
+.. image:: _static/basic-code.png
+
