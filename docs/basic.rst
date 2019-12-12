@@ -2,82 +2,14 @@
 Kod śledzący
 ############################
 
-
 Podstawowy kod śledzący
 =======================================
-
-Podstawowy kod śledzący SAREweb, który należy wstawić w kodzie źródłowym strony internetowej (pamiętając o podmianie identyfikatora wewnątrz kodu):
-
-.. code-block::  HTML
-
-    <script>
-       (function (p){window['sareX_params']=p;var s=document.createElement('script');
-       s.src='//x.sare25.com/libs/sarex4.min.js';s.async=true;var t=document.getElementsByTagName('script')[0];
-       t.parentNode.insertBefore(s,t);
-       })({
-          domain : 'brak.pl'
-       });
-    </script>
-
-
-Dodatkowe parametry do kodu śledzącego
-=======================================
-
-Dodatkowy parametr wymagany do monitorowania czasu spędzonego na stronie internetowej.
-
-.. code-block:: javascript
-
-   ping : true
-
-
-Dodatkowy parametr wymagany do integracji z Inis (wysyłki na e-mail zewnętrzny).
-
-.. code-block:: javascript
-
-   inisTrack : true
-
-
-Parametr, który blokujący działanie skryptów śledzących podczas przeglądania strony internetowej przez użytkownika. `Szczegółowe informacje są tutaj <https://sareweb.readthedocs.io/pl/latest/donottruck.html>`_
-
-.. code-block:: javascript
-
-   doNotTrack : true
-
-
-Parametr, który jest odpowiedzialny za wyświetlanie zgody WebPush. `Szczegółowe informacje są tutaj <https://sareweb.readthedocs.io/pl/latest/webpush.html>`_
-
-.. code-block:: javascript
-
-   webPush: {}
-
-
-Przykład kodu śledzącego z dodatkowymi parametrami
-=======================================
-
-.. code-block:: HTML
-
-    <script>
-       (function (p){window['sareX_params']=p;var s=document.createElement('script');
-       s.src='//x.sare25.com/libs/sarex4.min.js';s.async=true;var t=document.getElementsByTagName('script')[0];
-       t.parentNode.insertBefore(s,t);
-       })({
-          domain : 'brak.pl',
-          ping : true,
-          inisTrack : true
-       });
-    </script>
-
-
-Podstawowy kod śledzący - wersja uproszczona
-=======================================
-
-Wersja uproszczona różni się tym, że nie mamy możliwości konfigurowania parametrów w kodzie tak jak wyżej. Wszystkie zmiany są dokonywane bezpośrednio w panelu SAREhub (obrazek poniżej).
 
 Kod śledzący należy wstawić w kodzie źródłowym strony internetowej (pamiętając o podmianie identyfikatora wewnątrz kodu):
 
 .. code-block::  HTML
 
-    <script src="//cdn.sarehub.com/clients/brak-pl.js" async></script>
+    <script src="//cdn.sarehub.com/clients/<twój-identyfikator>.js" async></script>
 
 
 .. image:: _static/basic-code.png
